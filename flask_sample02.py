@@ -18,6 +18,10 @@ def omikuji(name):
     item=random.choice(items)
     return render_template("omikuji.html",item=item,name=name)
 
+@app.route("/members")
+def members():
+    members = ["Bob","Tom","Ken"]
+    return render_template("member.html",members=members)
 
 
 if __name__ == "__main__":
